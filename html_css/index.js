@@ -1,3 +1,8 @@
-window.addEventListener("load", () => {
-  console.log("Страница полностью загружена");
-});
+function $(callback) {
+  window.addEventListener("load", () => {
+    callback();
+  });
+  document.addEventListener("DOMContentLoaded", () => {
+    callback();
+  });
+}
